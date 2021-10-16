@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- xe-icon -->
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- swiper slide -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="gnb">
+            <div class="left-navi">
+                <div class="logo">
+                    <img src="assets/images/logo.png" alt="logo">
+                </div>
+                <ul class="left-menu">
+                    <li><a href="#">Dr.You 제주용암수란?</a></li>
+                    <li><a href="#">일반주문</a></li>
+                    <li><a href="#">정기배송</a></li>
+                </ul>
+            </div>
+            <div class="right-navi">
+                <ul class="right-menu">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">쿠폰사용</a></li>
+                    <li><a href="#">대량주문 문의</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="menu-btn">
+            <h1 class="xi-bars"></h1>
+        </div>
+    </header>
+
+    <section class="section01 main">
+        <div class="slide pc-slide">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide bg1"></div>
+                    <div class="swiper-slide bg2"></div>
+                    <div class="swiper-slide bg3"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="slide mobile-slide">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/images/m_visual_20.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/m_visual_22.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/m_visual_24.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <script>
+        // 헤더
+        const navi=document.querySelector('.right-menu');
+        const menuBtn=document.querySelector('.menu-btn');
+
+        menuBtn.addEventListener('click',()=>{
+            navi.classList.toggle('gnb-btn');
+        });
+
+        // 메인 슬라이드
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+</body>
+</html>
