@@ -197,16 +197,20 @@ header{
     border-bottom: 1px solid #e9e9e9;
     width: 100%;
 }
+.introduction br{
+    display: none;
+}
 .introduction h2{
     font-size: 2rem;
     padding-top: 80px;
+    padding-bottom: 50px;
 }
 .intro-bg{
     background-image: url('../images/bg_introduction_pc.jpg');
     background-position: center;
     background-repeat: no-repeat;
     /* height: 570px; */
-    padding-top: 640px;
+    padding-top: 550px;
 }
 .conts-area{
     position: relative;
@@ -219,25 +223,27 @@ header{
 .dot-bg{
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 204, 167, 0.12);
+    background-color: rgba(0, 171, 107, 0.12);
     border-radius: 50%;
     position: absolute;
     top: 0;
     left: 0;
+    animation: effect 1.5s ease-in-out infinite;
 }
 .dot-bg::before{
     content: "";
     width: 20px;
     height: 20px;
-    background-color: rgba(0, 222, 192, 0.2);
+    background-color: rgba(0, 171, 107, 0.2);
     border-radius: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
     margin-top: -10px;
     margin-left: -10px;
+    animation: effect 1.5s ease-in-out infinite;
 }
-.dot{
+.dot-ani .dot{
     width: 8px;
     height: 8px;
     background-color: #00e6c6;
@@ -252,30 +258,83 @@ header{
 }
 @keyframes effect{
     0%{
-        opacity: .5;
+        opacity: 0;
+        transform: scale(.5);
     }
     50%{
         opacity: 1;
+        transform: scale(1);
     }
     100%{
-        opacity: .5;
+        opacity: 0;
+        transform: scale(1);
     }
 }
 .ani01{
-    top: 213px;
+    top: 165px;
     left: 515px;
 }
 .ani02{
-    top: 263px;
+    top: 216px;
     left: 440px;
 }
 .ani03{
-    top: 412px;
+    top: 365px;
     left: 460px;
 }
 .ani04{
-    top: 455px;
+    top: 407px;
     left: 515px;
+}
+.intro-img1,
+.intro-img2{
+    display: none;
+}
+/* 링크배너 */
+.link_banner{
+    padding: 80px 0;
+}
+.banner_wrap{
+    justify-content: space-between;
+}
+.banner{
+    width: 460px;
+    border: 1px solid #e9e9e9;
+    border-radius: 8px;
+}
+.banner a{
+    justify-content: space-between;
+    padding: 35px 35px 0 35px;
+}
+.link_banner .text-area{
+    width: 70%;
+}
+.link_banner .tit{
+    letter-spacing: -1px;
+}
+.link_banner .desc{
+    margin-top: 20px;
+    color: #999;
+    line-height: 21px;
+}
+.link_banner .img-area{
+    width: 30%;
+}
+.img-area>img{
+    width: 100%;
+}
+
+/* 앱다운 */
+.app_down{
+    background: url('../images/bg_down.jpg') no-repeat center;
+    padding-bottom: 390px;   
+}
+.app_down .title{
+    font-size: 2rem;
+    padding-top: 80px;
+}
+.down_btn{
+    margin-top: 60px;
 }
 
 /* 미디어쿼리 */
@@ -327,14 +386,37 @@ header{
     .container{
         width: 100%;
     }
+    /* 용암수 소개 */
     .intro-bg{
-        background-image: url('../images/bg_introduction_mo.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-        padding-top: 580px;
+        display: none;
+    }
+    .intro-img1{
+        display: block;
     }
     .dot-ani{
         display: none;
+    }
+    /* 링크배너 */
+    .banner-wrap{
+        padding: 0 10px;
+    }
+    .banner a{
+        flex-direction: column;
+    }
+    .link_banner .text-area {
+        width: 100%;
+        text-align: center;
+    }
+    .link_banner .img-area{
+        width: 40%;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+    .ban01{
+        width: 48%;
+    }
+    .ban02{
+        width: 48%;
     }
 }
 @media(max-width:769px){
@@ -360,9 +442,8 @@ header{
     }
     .xi-bars{
         font-size: 2rem;
-        margin-top: 20px;
-    }
-    
+        margin: 0;
+    }    
     /* 메인이미지 */
     .main{
         padding-top: 80px;
@@ -387,6 +468,35 @@ header{
     .delivery-img {
         padding: 40px 20px 0;
     }
+    /* 용암수소개 */
+    .introduction h2 {
+        padding-top: 80px;
+        padding-bottom: 20px;
+        line-height: 40px;
+    }
+    /* 링크배너 */
+    .banner_wrap{
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner{
+        width: 90%;
+    }
+    .banner a{
+        flex-direction: row;
+    }
+    .link_banner .text-area {
+        width: 70%;
+        text-align: left;
+    }
+    .link_banner .img-area{
+        width: 30%;
+        margin: 0;
+        padding: 0;
+    }
+    .ban02{
+        margin-top: 20px;
+    }
 }
 @media(max-width:540px){
     /* 정기배송 */
@@ -399,11 +509,41 @@ header{
     .Regular-delivery img{
         width:70%;
     }
+    /* 용암수소개 */
+    .intro-img1{
+        display: none;
+    }
+    .intro-img2{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .introduction br{
+        display: block;
+    }
+    /* 링크배너 */
+    .banner a{
+        flex-direction: column;
+    }
+    .link_banner .text-area {
+        width: 100%;
+        text-align: center;
+    }
+    .link_banner .img-area{
+        width: 40%;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
 }
 @media(max-width:415px){
+    /* 정기배송 */
     .Regular-delivery h2 {
         font-size: 1.5rem;
-        padding-top: 60px;
+    }
+    /* 용암수소개 */
+    .introduction h2 {
+        font-size: 1.5rem;
+        line-height: 35px;
     }
 }
 @media(max-width:375px){
@@ -418,12 +558,23 @@ header{
     .noti-area {
         padding: 10px;
     }
-    .noti-area h2, span {
-        font-size: 0.813rem;
-    }
     .noti-area span {
         margin-left: 18px;
         letter-spacing: -1px;
+    }
+    /* 정기배송 */
+    .Regular-delivery {
+        padding: 50px 0;
+    }
+    .introduction h2 {
+        padding-top: 50px;
+    }
+    /* 링크배너 */
+    .link_banner .tit {
+        font-size: 1.250rem;
+    }
+    .banner a {
+        padding: 35px 20px 0;
     }
 }
 @media(max-width:280px){
