@@ -427,7 +427,7 @@ footer{
         position: absolute;
         top:0;        
         left: 0;        
-        margin-left: 1024px;
+        margin-left: 1025px;
         /* transition: all 0.3s; */
         z-index: 50;
     }
@@ -549,6 +549,9 @@ footer{
     .delivery-img {
         padding: 40px 20px 0;
     }
+    .delivery-text{
+        padding: 0 10px;
+    }
     /* 용암수소개 */
     .introduction h2 {
         padding-top: 80px;
@@ -598,7 +601,10 @@ footer{
         width: 100%;
     }
     .Regular-delivery img{
-        width:70%;
+        width: 65%;
+    }
+    .delivery-text {
+        font-size: 1.250rem;
     }
     /* 용암수소개 */
     .intro-img1{
