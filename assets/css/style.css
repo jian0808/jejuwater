@@ -411,6 +411,28 @@ footer{
     letter-spacing: normal;
 }
 
+/* 탑버튼 */
+#topBtn{
+    width: 56px;
+    height: 56px;
+    background-color: #000;
+    border-radius: 100%;
+    color: #fff;
+    position: fixed;
+    bottom: 25%;
+    right: 15%;
+    text-align: center;
+    line-height: 56px;
+    z-index: 999;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+#topBtn.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
 /* 미디어쿼리 */
 @media(max-width:1025px){
     body {
