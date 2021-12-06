@@ -164,6 +164,7 @@ header{
 }
 .swiper-button-next:after{
     content: '\e90b';
+    top: -6px;
 }
 
 /* 공지사항 */

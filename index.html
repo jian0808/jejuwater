@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <!-- swiper slide -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <!-- main css -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -85,15 +86,14 @@
         <div class="container noti-area row row-center">
             <h2 class="noti exbold">공지사항</h2>
             <span class="tit">
-                <a href="#">맛있는 물, 닥터유 제주용암수. 최대 25% 가격인하</a>
+                <a href="#" onclick = "return false">맛있는 물, 닥터유 제주용암수. 최대 25% 가격인하</a>
             </span>
         </div>
     </section>
     
     <!-- 정기배송 -->
     <section class="Regular-delivery">
-        <div class="container text-center" data-aos="fade-down"      data-aos-easing="linear"
-        data-aos-duration="1500">
+        <div class="container text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
             <h2 class="regular">돈과 시간을 아껴주는, 정기배송</h2>
         </div>
         <div class="container text-center">
@@ -136,8 +136,7 @@
     <section class="introduction">
         <div class="container intro-wrap">
             <div class="title-area text-center">
-                <h2 class="regular" data-aos="fade-down" data-aos-easing="linear"
-                data-aos-duration="1500"><span class="bold">경도</span>가 좋은 물의 기준, <br>Dr.You 제주용암수</h2>
+                <h2 class="regular" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500"><span class="bold">경도</span>가 좋은 물의 기준, <br>Dr.You 제주용암수</h2>
             </div>          
             <div class="conts-area intro-bg">
                 <div class="dot-ani ani01">
@@ -171,7 +170,7 @@
         <div class="container">
             <div class="row banner_wrap">
                 <div class="banner ban01">
-                    <a href="#" class="row">
+                    <a href="#" onclick = "return false" class="row">
                         <div class="text-area">
                             <h2 class="tit exbold">오늘 밤 주문하면 내일 도착!</h2>
                             <p class="desc">
@@ -185,7 +184,7 @@
                     </a>
                 </div>
                 <div class="banner ban02">
-                    <a href="#" class="row">
+                    <a href="#" onclick = "return false" class="row">
                         <div class="text-area">
                             <h2 class="tit exbold">법인/대량 구매</h2>
                             <p class="desc">
@@ -204,17 +203,16 @@
 
     <!-- 앱다운 -->
     <section class="app_down">
-        <div class="container" data-aos="fade-down" data-aos-easing="linear"
-        data-aos-duration="1500">
+        <div class="container" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
             <h2 class="title regular text-center">Dr.You 제주용암수 어플로<br></bt> 더욱 편하게 이용하세요!</h2>
             <ul class="down_btn row col-center">
                 <li class="btn01">
-                    <a href="#">
+                    <a href="#" onclick = "return false">
                         <img src="assets/images/btn_ios.png" alt="ios다운로드">
                     </a>
                 </li>
                 <li class="btn02">
-                    <a href="#">
+                    <a href="#" onclick = "return false">
                         <img src="assets/images/btn_android.png" alt="안드로이드다운로드">
                     </a>
                 </li>
@@ -229,14 +227,14 @@
     <footer>
         <div class="container footer-wrap">
             <ul class="util row">
-                <li><a href="#">회사소개</a></li>
-                <li><a href="#">개인정보처리방침</a></li>
-                <li><a href="#">이용약관</a></li>
+                <li><a href="#" onclick = "return false">회사소개</a></li>
+                <li><a href="#" onclick = "return false">개인정보처리방침</a></li>
+                <li><a href="#" onclick = "return false">이용약관</a></li>
             </ul>
             <ul class="company_info">
                 <li>(주)오리온 서울특별시 용산구 백범로 90다길 13(문배동)</li>
                 <li>(주)오리온 대표자 : 이경재  사업자 등록번호 : 709-81-00727
-                    <a href="#">사업자정보확인</a>
+                    <a href="#" onclick = "return false">사업자정보확인</a>
                 </li>
                 <li>통신판매업신고: 2019-서울용산-1143  고객센터 : 080-023-5701 (평일 09:00 ~ 17:30 / 주말, 공휴일 휴무)</li>
             </ul>
@@ -244,16 +242,15 @@
         </div>
     </footer>
 
+    <!-- jquery 3.2.1 -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- AOS js -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- swiper js -->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <!-- jquery 3.2.1 -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
+    
     <script>
         AOS.init();
-
 
         // 헤더
         const navi=document.querySelector('.right-menu');
